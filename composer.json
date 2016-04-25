@@ -38,7 +38,17 @@
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.5",
     "oscarotero/env": "^1.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    //Add custom plugins here
+    //"roots/soil": "dev-master",
+    //"wpackagist-plugin/timber-library": "*",
+    //"wpackagist-plugin/wordpress-seo": "^3.0",
+    "wpackagist-plugin/user-role-editor": "^4.21",
+    "wpackagist-plugin/custom-post-type-ui": "^1.1",
+    "wpackagist-plugin/advanced-custom-fields": "^4.4",
+    "wpackagist-plugin/admin-menu-editor": "^1.5",
+    "oodle/krumo": "^0.5.0"
+
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
@@ -49,11 +59,11 @@
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
+    "wordpress-install-dir": "/"
   },
   "scripts": {
     "test": [
-      "vendor/bin/phpcs --ignore=web/wp/,vendor/ -n -s ."
+      "vendor/bin/phpcs --ignore=//,vendor/ -n -s ."
     ]
   }
 }
